@@ -15,6 +15,8 @@ public class MedicineStore {
                 "20/5/18","" + "20,6,21"));
         System.out.println("vaccine date of manufacture date of expiry");
         System.out.println();
+        List<UpcomingVaccination> upcomingVaccinations = new ArrayList<>();
+        upcomingVaccinations.add(new UpcomingVaccination("new drug","20/8/18","20/9/21"));
         for(int i=0;i<vaccineList.size();i++)
         {
             System.out.println("vaccine = "+vaccineList.get(i).getNameOfVaccine()+" from "
@@ -22,6 +24,13 @@ public class MedicineStore {
             +" "+vaccineList.get(i).getDateOfExpire());
         }
         System.out.println();
+        System.out.println("upcoming vaccination");
+        for (int t=0;t<upcomingVaccinations.size();t++)
+        {
+            System.out.println("vaccine = "+upcomingVaccinations.get(t).getNameOfVaccine()+" from "
+                    +upcomingVaccinations.get(t).getDateOfManufacture()+" to"
+                    +" "+upcomingVaccinations.get(t).getDateOfExpire());
+        }
 
 
 
